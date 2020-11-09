@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Shadows+Into+Light&display=swap");
+
+/*
+font-family: 'Poppins', sans-serif;
+font-family: 'Shadows Into Light', cursive;
+*/
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: rgb(184, 178, 178);
+}
+
+.main-container,
+.main-container-one,
+.main-container-two {
+  padding: 120px 60px 60px 60px;
+  background-color: #f38181;
+}
+.secondary-container,
+.secondary-container-one,
+.secondary-container-two {
+  box-shadow: 5px 5px 15px black;
+  transition: 0.5s;
+  background: white;
+  height: 85vh;
+  border-radius: 20px;
+}
+
+nav {
+  background-color: white;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+  box-shadow: 5px 5px 10px black;
+}
+
+nav .img-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .img-logo img {
+  height: 10vh;
+}
+
+nav .img-logo h1.logo-text {
+  font-size: 30px;
+  color: #756c83;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 30px;
+  padding-right: 30px;
+  height: 50px;
+  width: 50px;
+}
+.line {
+  background-color: #232931;
+  height: 3px;
+  width: 40px;
+  transition: 0.5s;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+nav ul li {
+  padding-left: 100px;
+  width: 120px;
+}
+
+nav ul li a {
+  font-size: 18px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+nav ul li a:hover {
+  cursor: pointer;
+  border-bottom: 1px solid blue;
+}
+
+.some {
+  display: flex;
+  justify-content: space-between;
+}
+.some .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-left: 100px;
+  font-family: "Poppins", sans-serif;
+  color: #111;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.some .text .text-sec {
+  display: flex;
+  flex-direction: column;
+}
+.some .text .cp,
+.developer {
+  font-size: 20px;
+}
+.image .img-sec {
+  padding-top: 50px;
+  padding-right: 80px;
+}
+.image .img-sec img {
+  transition: 1s;
+  height: 73vh;
+}
+
+/*
+font-family: 'Poppins', sans-serif;
+font-family: 'Shadows Into Light', cursive;
+*/
+
+.heading {
+  display: flex;
+  justify-content: center;
+}
+.heading .heading-text {
+  font-family: "Poppins", sans-serif;
+  color: #756c83;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.container .random-image img {
+  height: 50vh;
+}
+.container .about-text {
+  padding-left: 12rem;
+  padding-right: 8rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+.container .about-text .name {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.container .about-text .lang {
+  font-weight: bold;
+}
+.container .about-text a {
+  text-decoration: none;
+}
+
+.secondary-container-two {
+  height: 50vh;
+}
+.social {
+  display: flex;
+  justify-content: space-around;
+}
+.social i:hover {
+  color: rgb(29, 131, 247);
+}
+.social .social-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.social .social-logo .logo-text {
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px black;
+  visibility: collapse;
+  background-color: #fbab7e;
+  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 50%);
+  transition: 0.5s;
+}
+.social .social-logo:hover .logo-text {
+  transition: 0.5s;
+  visibility: visible;
+}
+
+.social .social-logo .logo-text a {
+  text-decoration: none;
+  font-family: "poppins", sans-serif;
+  font-size: 20px;
+  color: black;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  height: 10vh;
+  background: rgb(231, 229, 229);
+  align-items: center;
+}
+.footer span {
+  padding-left: 20px;
+  font-weight: bold;
+  font-family: "Shadows Into Light", cursive;
+}
+
+@media screen and (max-width: 700px) {
+  .main-container,
+  .main-container-one,
+  .main-container-two {
+    padding: 60px;
+    padding-top: 100px;
+    padding-right: 120px;
+    width: 100%;
+  }
+  .burger {
+    display: flex;
+  }
+
+  nav ul {
+    transform: translateX(-100%);
+    box-shadow: 5px 5px 10px #111;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    background: #f38181;
+    width: 40vh;
+    height: 50vh;
+    transition: 1s;
+    padding-bottom: 100vh;
+  }
+  nav ul li {
+    padding-top: 20px;
+    padding-left: 0;
+    width: 200px;
+    align-items: center;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #111;
+  }
+  nav ul li a {
+    width: 20vh;
+    font-size: 25px;
+  }
+  .secondary-container,
+  .secondary-container-one,
+  .secondary-container-two {
+    width: 100%;
+    padding: 40px;
+    height: 100vh;
+  }
+
+  .some {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .social {
+    flex-direction: column;
+  }
+  .some .text {
+    padding-left: 15px;
+  }
+  .some .image {
+    padding-left: 40px;
+  }
+  .some .text span.suchit {
+    font-size: 35px;
+  }
+  .some .some .text .developer .cp {
+    font-size: 18px;
+  }
+
+  .some .image img {
+    height: 50vh;
+  }
+
+  .container .random-image img {
+    height: 35vh;
+  }
+  .container .about-text {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 3rem;
+    font-size: 15px;
+  }
+
+  .container .about-text .name {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .container .about-text .lang {
+    font-weight: bold;
+  }
+
+  .social .social-logo {
+    flex-direction: row-reverse;
+    padding: 20px;
+  }
+  .social .social-logo .logo-text {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    height: 12vh;
+    align-items: center;
+    width: 30vh;
+  }
+  .footer {
+    width: 83vh;
+  }
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="nav-main">
+        <nav class="nav-sec">
+           <div class="img-logo">
+               <img src="images/lion.jpg" alt="Logo">
+               <h1 class="logo-text">Voxer</h1>
+           </div>
+           <div class="burger" onclick="popup()">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+           <ul class="nav-links">
+            <li class="nav-items"><a href=#Home>Home</a></li>
+            <li class="nav-items"><a href=#About>About Me</a></li>
+            <li class="nav-items"><a href=#contact>Contact Me</a></li>
+        </nav>
+    </div>
+
+    <div class="main-container" id="Home">
+        <div class="secondary-container">
+          
+            <div class="some">
+                <div class="text">
+                    <div class="text-sec">
+                        <span class="cp">Hello World, I'm</span>
+                        <span class="suchit">Suchit Kumar</span>
+                        <span class="developer">Competitive Programmer, Web Developer</span>
+                    </div>
+                </div>
+                <div class="image">
+                    <div class="img-sec">
+                     <img src="images/profile.png" alt="Profile" >
+                    </div>                
+                </div>
+            </div>
+            
+        </div> 
+    </div>
+
+    <div class="main-container-one" id="About">
+        <div class="secondary-container-one">
+           <div class="heading">
+               <h1 class="heading-text">About Me</h1>
+           </div>
+           <div class="container">
+               <div class="random-image">
+                   <img src="images/ScreenShot.png" alt="">
+               </div>
+               <div class="about-text">
+                   <p>
+                       Hello World, I am <span class="name">Suchit Kumar</span>
+                       underGrad At <a href="https://www.ambp.in/">Ambedkar Institute Of Technology</a><br>
+                       A Competitive Programming Enthusiast,<br/>
+                        I can Write Code in <span class="lang">Java, C/C++, Python, 
+                            JavaScript</span> . 
+                        Also a Full Stack Web Developer knows
+                        <span class="lang">HTML, CSS, PHP, Node.js, React.js</span>  
+                        Currently Learning New Technologies 
+                        Like Machine Learning 
+                   </p>
+               </div>
+           </div>
+        </div>
+    </div>
+
+    <div class="main-container-two" id="contact">
+        <div class="secondary-container-two">
+            <div class="heading">
+                <h1 class="heading-text">Contact Me</h1>
+            </div>
+            <div class="social">
+                <div class="social-logo">
+                    <div class="logo-text">
+                        <span><a href="">Suchit Kumar</a></span>
+                    </div>
+                    <i class="fa fa-facebook-square fa-3x" aria-hidden="true" ></i>
+                </div>
+                <div class="social-logo">
+                    <div class="logo-text">
+                        <span><a href="">@suchitkumar</a></span>
+                    </div>
+                    <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
+                </div>
+                <div class="social-logo">
+                    <div class="logo-text">
+                        <span><a href="">Suchit Kumar</a></span>
+                    </div>
+                    <i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
+                </div>
+                <div class="social-logo">
+                    <div class="logo-text">
+                        <span><a href="">Voxer03</a></span>
+                    </div>
+                    <i class="fa fa-github-square fa-3x" aria-hidden="true"></i>
+                    
+                </div>
+                <div class="social-logo">
+                    <div class="logo-text">
+                        <span><a href="">Mail Me</a></span>
+                    </div>
+                    <i class="fa fa-envelope fa-3x" aria-hidden="true"></i>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <i class="fa fa-copyright fa-1x" aria-hidden="true"></i>
+        <span>Voxer</span>
+    </div>
+
+
+    <script>
+        let isOpen=false;
+let bar= document.getElementsByClassName('nav-links');
+let lines=document.getElementsByClassName('line');
+function popup(){
+    if(!isOpen){
+        lines[0].style.transform="rotate(45deg)";
+        lines[1].style.transform="rotate(-45deg)";
+        lines[2].style.display="none";
+        bar[0].style.transform="translateX(0%)";
+        isOpen=true;
+    }
+    else{
+        lines[0].style.transform="rotate(0)";
+        lines[1].style.transform="rotate(0)";
+        lines[2].style.display="flex";
+        bar[0].style.transform="translateX(-100%)";
+        isOpen=false;
+    }
+}
+
+let lastScrollTop=0;
+window.addEventListener("scroll", function(){
+    let scrollTop=window.pageYOffset ||document.documentElement.scrollTop;
+    if(scrollTop>lastScrollTop){
+        if(isOpen){
+            lines[0].style.transform="rotate(0)";
+            lines[1].style.transform="rotate(0)";
+            lines[2].style.display="flex";
+            bar[0].style.transform="translateX(-100%)";
+            isOpen=false
+        }
+    }
+})
+    </script>
+</body>
+
+</html>
